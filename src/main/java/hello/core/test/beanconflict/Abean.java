@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 
 //@Qualifier("aa")
+@Component
 @Primary
 public class Abean implements BeanTest{
     @Override
