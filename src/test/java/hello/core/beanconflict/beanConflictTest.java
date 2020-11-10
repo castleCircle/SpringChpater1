@@ -19,7 +19,6 @@ public class beanConflictTest {
     @Test
     void beanTest(){
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AutoAppConfig.class);
-//        ac.getBean(BeanContainer.class);
     }
 
 

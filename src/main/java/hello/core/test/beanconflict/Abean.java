@@ -4,10 +4,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-
-//@Qualifier("aa")
 @Component
-@Primary
+@Qualifier("aa")
 public class Abean implements BeanTest{
     @Override
     public void test() {
