@@ -34,7 +34,7 @@ public class BeanLifeCycleTest {
             return networkClient;
         }
 
-        @Bean(initMethod = "initial")
+        @Bean
         public NetworkClientTest networkClientTest(){
             NetworkClientTest networkClientTest = new NetworkClientTest();
             networkClientTest.setUrl("http://naver.com");

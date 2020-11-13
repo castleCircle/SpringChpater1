@@ -1,5 +1,8 @@
 package hello.core.lifecycle;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class NetworkClientTest{
     
     private String url;
@@ -24,10 +27,12 @@ public class NetworkClientTest{
         System.out.println("url : " + url + "connect : " + "호출");
     }
 
+    @PreDestroy
     public void close(){
         disconnect();
     }
 
+    @PostConstruct
     public void initial(){
         connect();
         call();
