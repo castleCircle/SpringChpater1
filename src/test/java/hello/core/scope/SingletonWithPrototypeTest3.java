@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import javax.inject.Provider;
+
 public class SingletonWithPrototypeTest3 {
 
     @Test
@@ -23,11 +25,21 @@ public class SingletonWithPrototypeTest3 {
 
 
     static class SingleTon3{
+//        @Autowired
+//        private ObjectProvider<Prototype3> objectProvider;
+//
+//        public int logic(){
+//            Prototype3 providerObject = objectProvider.getObject();
+//            providerObject.add();
+//            int count = providerObject.getCount();
+//            return count;
+//        }
+
         @Autowired
-        private ObjectProvider<Prototype3> objectProvider;
+        private Provider<Prototype3> objectProvider;
 
         public int logic(){
-            Prototype3 providerObject = objectProvider.getObject();
+            Prototype3 providerObject = objectProvider.get();
             providerObject.add();
             int count = providerObject.getCount();
             return count;
